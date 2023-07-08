@@ -1,0 +1,51 @@
+<section class="d-flex align-items-center container section-one p-0">
+
+
+  <div class="col-md-6 d-flex  flex-column align-items-center box-contact">
+        <h1 class="header-color text-center">Unsere Leistungen</h1>
+        <p>Von der Büroreinigung bis zur Praxisreinigung</p>
+        <div>
+          <button class="btn contact-btn shadow-lg me-2" (click)="contactClick()">
+            Kontakt
+          </button>
+        </div>
+      </div>
+
+</section>
+
+<section class="section-two">
+  <div class="d-flex justify-content-center text-center pt-5">
+    <h1>Ausgezeichneter Reinigungsservice für Privatpersonen und Unternehmen</h1>
+  </div>
+  <div class="container text-center">
+    <p>
+      Sie suchen eine helfende Hand für das Sauberhalten Ihres Hauses oder Ihrer Wohnung ? Dann sind wir von Fit and Clean24 Ihre ebenso versierten wie vertrauenswürdigen Ansprechpartner. Wir übernehmen vielseitige Leistungen wie die Hotelreinigung oder die Praxisreinigung in Köln und Umgebung. Auch für das Säubern von Treppenhäusern und für die Übernahme der Kehrwoche ist unsere Firma Ihre geeignete Anlaufstelle. Darüber hinaus setzen wir einen Schwerpunkt auf Reinigungen im gewerblichen bzw. öffentlichen Bereich. Gerne unterstützen wir Sie z. B. mit der professionellen Durchführung von Schul-, Restaurant- und Hotelreinigungen. Auch das regelmäßige Desinfizieren von Praxisräumen gehört zu den Kernkompetenzen von Fit and Clean24.
+    </p>
+  </div>
+</section>
+
+<section class="mb-5 pt-5 section-three" id="services">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-4 col-sm-6 pb-4" *ngFor="let service of services">
+        <div class="row">
+          <div class="col-2">
+            <svg
+            aria-hidden="true"
+            class="e-font-icon-svg e-fas-broom icons mb-3"
+            viewBox="0 0 640 512"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M256.47 216.77l86.73 109.18s-16.6 102.36-76.57 150.12C206.66 523.85 0 510.19 0 510.19s3.8-23.14 11-55.43l94.62-112.17c3.97-4.7-.87-11.62-6.65-9.5l-60.4 22.09c14.44-41.66 32.72-80.04 54.6-97.47 59.97-47.76 163.3-40.94 163.3-40.94zM636.53 31.03l-19.86-25c-5.49-6.9-15.52-8.05-22.41-2.56l-232.48 177.8-34.14-42.97c-5.09-6.41-15.14-5.21-18.59 2.21l-25.33 54.55 86.73 109.18 58.8-12.45c8-1.69 11.42-11.2 6.34-17.6l-34.09-42.92 232.48-177.8c6.89-5.48 8.04-15.53 2.55-22.44z">
+            </path>
+          </svg>
+        </div>
+          <div class="col-10">
+            <h3>{{service}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

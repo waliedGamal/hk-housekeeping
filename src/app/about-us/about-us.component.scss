@@ -1,0 +1,30 @@
+@import "../../styles.scss";
+
+h2 ,h1{
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 51px;
+  color: $mainColor;
+  span{
+    font-weight: 400;
+  }
+}
+
+img{
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transition: ease-in-out 0.5s;
+
+  &:hover{
+    transform: scale(1);
+  }
+}
+
+@media screen and (min-width: 300px) {
+  .box-contact{
+    margin-left: 2rem;
+  }
+}

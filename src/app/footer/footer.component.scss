@@ -1,0 +1,40 @@
+@import '../../styles.scss';
+
+footer{
+  background-color: $mainColor;
+  i{
+    font-size: 3rem;
+    color:#fff;
+    margin-right: 3.5rem;
+    margin-left: 3.5rem;
+  }
+
+  span{
+    color: #fff;
+  }
+
+  .box-contnet{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  a{
+    text-decoration: none;
+    color: #d6d4d4;
+    &:hover{
+      color: #fff;
+    }
+  }
+}
+
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .footer{
+    display: flex;
+    flex-direction: column !important;
+  }
+  .col-md-4{
+    margin: 1rem;
+  }
+}

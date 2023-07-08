@@ -1,0 +1,61 @@
+@import "../../styles.scss";
+section{
+  background-image: url("../../assets/Untitled-2.png");
+  height: 80vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+
+
+    h1{
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 50px;
+      color: $mainColor;
+      span{
+        font-weight: 400;
+      }
+    }
+    .contact-btn{
+      background-color: $mainColor;
+      color: #ffffff;
+      border: 5px solid #ffffff;
+      padding: 0.7rem 1.2rem;
+      font-weight: 500;
+      font-size: 0.8rem;
+      &:hover{
+          background-color: #ffffff;
+          color: $mainColor;
+          border: 5px solid $mainColor;
+      }
+    }
+
+
+}
+
+main{
+  h4{
+    color: $mainColor;
+    font-weight: 600;
+    line-height: 30px;
+    font-size: 20px;
+  }
+  h6 , li{
+    font-weight: 400;
+    line-height: 26px;
+    font-size: 16px;
+    color: #121212;
+  }
+
+  .info{
+    display: flex;
+    align-items: baseline;
+    height: 25px;
+
+    span{
+    font-weight: 600;
+    }
+
+
+  }
+}

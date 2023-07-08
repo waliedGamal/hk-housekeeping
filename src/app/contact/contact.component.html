@@ -1,0 +1,63 @@
+<section class="bg-contant p-0">
+  <div class="bg-layout">
+  <h1>Kontakt</h1>
+  </div>
+</section>
+<div class="contact-form my-5">
+  <form class="d-flex justify-content-center flex-column align-items-center"  [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm,$event)">
+    <h2>Nehmen Sie Kontakt auf</h2>
+    <div class="col-md-6 p-2">
+      <label class="form-label" for="Salutation" > Anrede </label>
+      <select  class="form-select" name="gender" aria-label="Default select example" formControlName="Salutation" id="Salutation"  >
+        <option selected>Anrede auswählen</option>
+        <option value="frau">frau </option>
+        <option value="herr">herr</option>
+      </select>
+
+
+      <label class="form-label" for="UserName"  > Name * </label>
+      <input class="form-control" type="text" name="from_name" formControlName="UserName" id="UserName" placeholder="Name"
+            [class.is-valid]="contactForm.get('UserName')?.valid && contactForm.get('UserName')?.touched"
+            [class.is-invalid]="contactForm.get('UserName')?.invalid && contactForm.get('UserName')?.touched">
+
+
+
+      <label class="form-label" for="Phone" > Telefon * </label>
+      <input class="form-control" type="text" name="from_phone" formControlName="Phone" id="Phone" placeholder="Telefon"
+            [class.is-valid]="contactForm.get('Phone')?.valid && contactForm.get('Phone')?.touched"
+            [class.is-invalid]="contactForm.get('Phone')?.invalid && contactForm.get('Phone')?.touched">
+
+
+      <label class="form-label" for="Email"  > E-mail * </label>
+      <input class="form-control" type="text" name="from_email" formControlName="Email" id="Email" placeholder="E-mail"
+      [class.is-valid]="contactForm.get('Email')?.valid && contactForm.get('Email')?.touched"
+      [class.is-invalid]="contactForm.get('Email')?.invalid && contactForm.get('Email')?.touched">
+
+
+      <label class="form-label" for="News" > Nachricht * </label>
+      <textarea class="form-control" name="message" formControlName="News" id="News" rows="5" placeholder="Ihre Nachricht hier"
+            [class.is-valid]="contactForm.get('News')?.valid && contactForm.get('News')?.touched"
+            [class.is-invalid]="contactForm.get('News')?.invalid && contactForm.get('News')?.touched">
+      </textarea>
+
+      <label for="flexCheckDefault">Einwilligungserklärung *</label> <br>
+      <input class="form-check-input me-2 mt-2 " formControlName="agree" type="checkbox" value="" id="flexCheckDefault">
+      <label class="form-check-label mt-1" for="flexCheckDefault">
+        Mit Senden der Anfrage willigen Sie ein, von uns kontaktiert zu werden.
+        Es gelten unsere Datenschutzbedingungen. </label>
+        <span *ngIf="!contactForm.get('agree')?.value && contactForm.get('agree')?.touched"   >
+          <p class="text-danger" *ngIf="!contactForm.get('agree')?.value"> Feld ist erforderlich </p>
+        </span>
+
+      <div class="d-flex justify-content-center my-3">
+      <button *ngIf="!loading" class="contact-btn rounded-1" type="submit" [disabled]="!contactForm.valid"> Anfrage abschicken </button>
+      <div *ngIf="loading" class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+
+    <div class="alert-success text-center message" *ngIf="successMap">
+      <h3 class="alert-success text-white"> <i class="bi bi-check-circle-fill "> {{message}} </i></h3>
+    </div>
+
+    </div>
+  </form>
+</div>

@@ -1,0 +1,73 @@
+@import "../../styles.scss";
+section{
+  background-image: url("../../assets/Untitled-2.png");
+  height: 80vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+    h1{
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 50px;
+      color: $mainColor;
+      span{
+        font-weight: 700;
+        font-size: 34px;
+      }
+    }
+}
+
+main{
+  h2{
+    color: $mainColor;
+    font-weight: 500;
+    line-height: 50px;
+    font-size: 2rem;
+  }
+  img{
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transition: ease-in-out 0.5s;
+
+    &:hover{
+      transform: scale(1);
+    }
+}
+}
+
+.underline-animation {
+  text-decoration: none;
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .stroke {
+    stroke: $mainColor;
+    stroke-width: .11em;
+    stroke-dasharray: 822;
+    stroke-dashoffset: 822;
+    animation: underlineAnimation 2s 3s linear forwards infinite;
+    -webkit-animation: underlineAnimation 2s 3s linear forwards infinite;
+}
+}
+
+@keyframes underlineAnimation {
+  from {
+    stroke-dashoffset: 822;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+
+}
+
+

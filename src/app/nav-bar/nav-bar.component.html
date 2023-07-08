@@ -1,0 +1,75 @@
+<!-- header -->
+
+<header>
+  <ul class="nav d-flex justify-content-between border">
+    <div class="d-flex">
+      <li class="nav-item">
+        <a class="nav-link dash">
+          <i class="bi bi-house-door-fill me-2"></i> H&K Housekeeping</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link dash"> Gürzenich straße 25</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link"> 50667 Köln </a>
+      </li>
+    </div>
+
+    <div class="d-flex">
+      <li class="nav-item">
+        <a class="nav-link dash" href="tel:+49017614191272">
+          <i class="bi bi-telephone-fill me-2" ></i>(+49) 017614191272</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link dash" href="mailto:HK-housekeeping2277@outlook.com">
+          <i class="bi bi-send-fill me-2"></i>info@HK-Housekeeping.com</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="mailto:Moustafa2277@outlook.com">
+          <i class="bi bi-send-fill me-2"></i>Moustafa@HK-Housekeeping.com</a
+        >
+      </li>
+    </div>
+  </ul>
+</header>
+
+<!-- Nav Bar -->
+
+<nav class="navbar nav navbar-expand-lg shadow-lg sticky-top">
+  <div class="container d-flex justify-content-between">
+    <div class="">
+      <a class="navbar-brand"> <img class="logo w-25 h-25" (click)="HomeClick()" src="../../assets/icon.jpg" alt="H&K Housekeeping" ></a>
+      <button (click)="showClass()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+
+    <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarNav" [ngClass]="{ 'show' : isToggle  }">
+      <ul class="navbar-nav">
+        <li class="nav-item" (click)="hideClass()">
+          <a class="nav-link" aria-current="page" routerLink="welcome" routerLinkActive="active" >Willkommen </a>
+        </li>
+        <li class="nav-item" (click)="hideClass()">
+          <a class="nav-link" routerLink="aboutUs" routerLinkActive="active">Über<span class="ms-1">uns</span></a>
+        </li>
+        <li class="nav-item" (click)="hideClass()">
+          <a class="nav-link" routerLink="services" routerLinkActive="active" >Leistungen</a>
+        </li>
+        <li class="nav-item" (click)="hideClass()">
+          <a class="nav-link" routerLink="credentials" routerLinkActive="active">Referenzen</a>
+        </li>
+        <li class="nav-item" (click)="hideClass()">
+          <a class="nav-link" routerLink="contact" routerLinkActive="active">Kontakt</a>
+        </li>
+        <li class="nav-item" (click)="hideClass()">
+          <a class="nav-link" routerLink="career" routerLinkActive="active">Karriere</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

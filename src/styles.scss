@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+$mainColor:#0086CD;
+body{
+  font-family:"PT Sans Caption" , sans-serif;;
+}
+p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 25px;
+  color: rgb(18, 18, 18);
+}
+
+.header-color {
+  color: rgb(85, 89, 92);
+}
+
+.section-one{
+  background-image: url("../src/assets/Untitled-2.png");
+  height: 80vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.contact-btn{
+  background-color: $mainColor;
+  color: #ffffff;
+  border: 5px solid #ffffff;
+  padding: 0.7rem 1.2rem;
+  font-weight: 500;
+  font-size: 0.8rem;
+  &:hover{
+      background-color: #ffffff;
+      color: $mainColor;
+      border: 5px solid $mainColor;
+  }
+}
